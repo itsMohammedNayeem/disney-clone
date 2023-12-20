@@ -1,5 +1,3 @@
-// https://disney-clone.azurewebsites.net/api/getaisuggestion
-
 import {
   app,
   HttpRequest,
