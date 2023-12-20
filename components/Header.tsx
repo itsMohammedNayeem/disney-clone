@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ThemeToggler } from "./ThemeToggler";
 import Link from "next/link";
+import SearchInput from "./SearchInput";
 
 function Header() {
   return (
@@ -11,11 +12,12 @@ function Header() {
           width={120}
           height={100}
           alt="Disney Logo"
-          className={"cursor-pointer invert"}
+          className={"cursor-pointer invert-0 dark:invert"}
         />
       </Link>
 
       <div className="flex space-x-2">
+        <SearchInput />
         <ThemeToggler />
       </div>
     </header>
