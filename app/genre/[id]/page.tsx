@@ -1,3 +1,4 @@
+import AISuggestion from "@/components/AISuggestion";
 import MoviesCarousel from "@/components/MoviesCarousel";
 import { getDiscoverMovies } from "@/lib/getMovies";
 
@@ -19,7 +20,7 @@ async function GenrePage({
         <h1 className="text-6xl font-bold px-10">Results for {genre}</h1>
 
         {/* <AIAzureSuggestion term={genre} /> */}
-        {/* <AISuggestion term={genre} /> */}
+        <AISuggestion term={genre} />
         <MoviesCarousel title={`Genre`} movies={movies} isVertical />
       </div>
     </div>
