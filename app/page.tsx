@@ -1,7 +1,7 @@
-export default function Home() {
+export default async function Home() {
   return (
     <main className="">
-      <h1>Disney</h1>
+      <div className="flex flex-col space-y-2 xl:-mt-48">Carousel</div>
     </main>
   );
 }
