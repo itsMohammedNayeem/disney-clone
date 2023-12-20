@@ -1,6 +1,6 @@
 import { Movie } from "@/typings";
-import MovieCard from "./MovieCard";
 import { cn } from "@/lib/utils";
+import MovieCard from "./MovieCard";
 
 type Props = { title?: string; movies: Movie[]; isVertical?: boolean };
 
