@@ -37,24 +37,8 @@ export async function getSearchedMovies(term: string) {
   const url = new URL("https://api.themoviedb.org/3/search/movie");
 
   url.searchParams.set("query", term);
-  url.searchParams.set("include_adult", "false");
-  url.searchParams.set("language", "en-US");
-  url.searchParams.set("page", "1");
 
-  const options: RequestInit = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `Bearer ${process.env.TMDB_API_KEY}`,
-    },
-    next: {
-      revalidate: 60 * 60 * 24,
-    },
-  };
-
-  const response = await fetch(url.toString(), options);
-  const data = (await response.json()) as SearchResults;
-
+  const data = await fetchFromTMDB(url);
   return data.results;
 }
 
