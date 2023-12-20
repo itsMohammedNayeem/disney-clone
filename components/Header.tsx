@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ThemeToggler } from "./ThemeToggler";
 import Link from "next/link";
 
 function Header() {
@@ -14,7 +15,9 @@ function Header() {
         />
       </Link>
 
-      <div className="flex space-x-2"></div>
+      <div className="flex space-x-2">
+        <ThemeToggler />
+      </div>
     </header>
   );
 }
